@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  padding: 1rem;
+  background: var(--gray-500);
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+}
+
+/* Start checkbox styles */
+.container label {
+  display: block;
+  position: relative;
+  padding-left: 1.25rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: tranparent;
+  border: 2px solid var(--blue-500);
+  border-radius: 50%;
+  
+  transition: all 0.2s;
+}
+
+.container label:hover span {
+  background: rgb(30, 111, 159, 0.1);
+  border: 2px solid var(--blue-600);
+}
+
+.container label input:checked ~ span {
+  background: var(--purple-600);
+  border: 2px solid var(--purple-600);
+}
+
+.container label:hover input:checked ~ span {
+  background: var(--purple-500);
+  border: 2px solid var(--purple-500);
+}
+
+.container label span:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+  left: 4.5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--gray-100);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.container label input:checked ~ span:after {
+  display: block;
+}
+/* End checkbox styles */
+
+.container p {
+  flex: 1;
+
+  font-size: 0.875rem;
+  color: var(--gray-100);
+  line-height: 140%;
+}
+
+.taskCompleted {
+  text-decoration: line-through;
+  text-decoration-color: var(--gray-300);
+  color: var(--gray-300) !important;
+}
+
+.container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0.45rem;
+  border-radius: 4px;
+  
+  color: var(--gray-300);
+
+  transition: all 0.2s;
+}
+
+.container button:hover {
+  background: var(--gray-400);
+  color: var(--red-500);
+}

@@ -1,0 +1,102 @@
+.content {
+  max-width: 46rem;
+
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.content form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: -2.55rem;
+}
+
+.content form input {
+  height: 3.375rem;
+  flex: 1;
+
+  color: var(--gray-100);
+  background: var(--gray-500);
+  border-radius: 8px;
+  border: 0;
+
+  padding: 1rem;
+}
+
+.content form input:focus {
+  outline: 1px solid var(--purple-600);
+}
+
+.content form button {
+  height: 3.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--gray-100);
+  background: var(--blue-600);
+  border-radius: 8px;
+  border: 0;
+
+  padding: 1rem;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.content form button:hover {
+  background: var(--blue-500);
+}
+
+.tasks {
+  margin-top: 4rem;
+}
+
+.tasks header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 1.5rem;
+}
+
+.tasks header div strong {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.tasks header div span {
+  padding: 0.125rem 0.5rem;
+  margin-left: 0.5rem;
+
+  font-size: 0.75rem;
+  font-weight: bold;
+
+  color: var(--gray-100);
+  background: var(--gray-400);
+  border-radius: 8px;
+}
+
+.tasks header div:first-child strong {
+  color: var(--blue-500);
+}
+
+.tasks header div:last-child strong {
+  color: var(--purple-500);
+}
+
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media(max-width: 768px) {
+  .content form input {
+    width: 50%;
+  }
+}
